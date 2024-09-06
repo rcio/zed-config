@@ -1,102 +1,85 @@
 [
-    {
-        "bindings": {
-            "ctrl-g": "menu::Cancel",
-            "ctrl-x o": "workspace::ActivateNextPane",
-            "ctrl-x p": "workspace::ActivatePreviousPane",
-            "ctrl-x ctrl-s": "workspace::Save",
-            "ctrl-x +": "zed::IncreaseBufferFontSize",
-            "ctrl-x -": "zed::DecreaseBufferFontSize"
-        }
-    },
-    {
-        "context": "Workspace",
-        "bindings": {
-            "ctrl-x ctrl-f": "file_finder::Toggle",
-            "ctrl-x d": "project_symbols::Toggle",
-            "alt-x": "command_palette::Toggle"
-        }
-    },
-    {
-        "context": "Pane",
-        "bindings": {
-            "alt-1": [
-                "pane::ActivateItem",
-                0
-            ],
-            "alt-2": [
-                "pane::ActivateItem",
-                1
-            ],
-            "alt-3": [
-                "pane::ActivateItem",
-                2
-            ],
-            "alt-4": [
-                "pane::ActivateItem",
-                3
-            ],
-            "alt-5": [
-                "pane::ActivateItem",
-                4
-            ],
-            "alt-6": [
-                "pane::ActivateItem",
-                5
-            ],
-            "alt-7": [
-                "pane::ActivateItem",
-                6
-            ],
-            "alt-8": [
-                "pane::ActivateItem",
-                7
-            ],
-            "alt-9": [
-                "pane::ActivateItem",
-                8
-            ],
-            "ctrl-x 2": "pane::SplitDown",
-            "ctrl-x 3": "pane::SplitRight",
-            "ctrl-x k": "pane::CloseActiveItem",
-            "ctrl-x 1": "pane::CloseInactiveItems"
-        }
-    },
-    {
-        "context": "Editor",
-        "bindings": {
-            "ctrl-g": "editor::Cancel",
-            "ctrl-backspace": "editor::DeleteToPreviousWordStart",
-            "ctrl-w": "editor::Cut",
-            "alt-w": "editor::Copy",
-            "ctrl-y": "editor::Paste",
-            "ctrl-_": "editor::Undo",
-            "alt-v": "editor::MovePageUp",
-            "ctrl-v": "editor::MovePageDown",
-            "alt-g": "go_to_line::Toggle",
-            "ctrl-x [": "editor::MoveToBeginning",
-            "ctrl-x ]": "editor::MoveToEnd",
-            "ctrl-s": [
-                "buffer_search::Deploy",
-                {
-                    "focus": true
-                }
-            ],
-            "alt-;": [
-                "editor::ToggleComments",
-                {
-                    "advance_downwards": false
-                }
-            ]
-        }
-    },
-    {
-        "context": "BufferSearchBar > Editor",
-        "bindings": {
-            "ctrl-g": "buffer_search::Dismiss",
-            "enter": "buffer_search::Dismiss",
-            "ctrl-s": "search::SelectNextMatch",
-            "ctrl-r": "search::SelectPrevMatch"
-        }
+  {
+    "bindings": {
+      "ctrl-g": "menu::Cancel",
+      "ctrl-x o": "workspace::ActivateNextPane",
+      "ctrl-x p": "workspace::ActivatePreviousPane",
+      "ctrl-x ctrl-s": "workspace::Save",
+      "ctrl-x +": "zed::IncreaseBufferFontSize",
+      "ctrl-x -": "zed::DecreaseBufferFontSize",
+      "ctrl-x 1": "workspace::CloseInactiveTabsAndPanes",
+      "ctrl-c t": "terminal_panel::ToggleFocus"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-g": "menu::Cancel",
+      "ctrl-x ctrl-f": "file_finder::Toggle",
+      "ctrl-x b": "projects::OpenRecent",
+      "ctrl-x d": "project_symbols::Toggle",
+      "alt-x": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-1": ["pane::ActivateItem", 0],
+      "alt-2": ["pane::ActivateItem", 1],
+      "alt-3": ["pane::ActivateItem", 2],
+      "alt-4": ["pane::ActivateItem", 3],
+      "alt-5": ["pane::ActivateItem", 4],
+      "alt-6": ["pane::ActivateItem", 5],
+      "alt-7": ["pane::ActivateItem", 6],
+      "alt-8": ["pane::ActivateItem", 7],
+      "alt-9": ["pane::ActivateItem", 8],
+      "ctrl-x 2": "pane::SplitDown",
+      "ctrl-x 3": "pane::SplitRight",
+      "ctrl-x k": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-g": "editor::Cancel",
+      "ctrl-backspace": "editor::DeleteToPreviousWordStart",
+      "ctrl-w": "editor::Cut",
+      "alt-w": "editor::Copy",
+      "ctrl-y": "editor::Paste",
+      "ctrl-_": "editor::Undo",
+      "alt-v": "editor::MovePageUp",
+      "ctrl-v": "editor::MovePageDown",
+      "alt-g": "go_to_line::Toggle",
+      "ctrl-x [": "editor::MoveToBeginning",
+      "ctrl-x ]": "editor::MoveToEnd",
+      "ctrl-s": [
+        "buffer_search::Deploy",
+        {
+          "focus": true
+        }
+      ],
+      "alt-;": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-shift-o": "outline::Toggle",
+      "ctrl-g": "editor::Cancel"
+    }
+  },
+  {
+    "context": "BufferSearchBar > Editor",
+    "bindings": {
+      "ctrl-g": "buffer_search::Dismiss",
+      "enter": "buffer_search::Dismiss",
+      "ctrl-s": "search::SelectNextMatch",
+      "ctrl-r": "search::SelectPrevMatch"
+    }
+  }
 ]
